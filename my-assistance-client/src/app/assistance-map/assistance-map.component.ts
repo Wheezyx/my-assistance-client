@@ -10,8 +10,8 @@ import {MatDialog} from '@angular/material';
   providers: [DialogService]
 })
 export class AssistanceMapComponent implements OnInit {
-  lat = 51.678418;
-  lng = 7.809007;
+  lat = 52.232222;
+  lng = 21.008333;
 
   constructor(public dialog: MatDialog) {
   }
@@ -25,6 +25,10 @@ export class AssistanceMapComponent implements OnInit {
       width: '20%',
       minWidth: '200px'
     });
+  }
+
+  showBoundaries(event) {
+    console.log(event);
   }
 
 }

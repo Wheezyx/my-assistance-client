@@ -14,6 +14,7 @@ import {FormsModule} from '@angular/forms';
 import {AuthenticationService} from './auth/authentication.service';
 import {AuthGuard} from './auth/auth.guard';
 import {AgmCoreModule} from '@agm/core';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import {AgmCoreModule} from '@agm/core';
     MatButtonModule,
     MatDialogModule,
     FormsModule,
+    HttpClientModule,
     AgmCoreModule.forRoot({
       apiKey: ''
     })
