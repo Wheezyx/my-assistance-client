@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
       { username: this.model.username, password: this.model.password },
       () => {
         this.loading = false;
-        this.router.navigateByUrl('/');
+        this.router.navigateByUrl('/role');
       },
       (error) => {
         switch (error.status) {
