@@ -12,7 +12,7 @@ import { AssistanceService } from '../service/assistance.service';
 export class HelpFormComponent implements OnInit {
   form: FormGroup;
   typesOfDisabilities: string[] = ["Choroba neurologiczna", 
-    "Niepełnosprawność ruchowa", "Niepełnosprawność słuchu i/lub mowy"];
+    "Niepełnosprawność ruchowa", "Niepełnosprawność słuchu i/lub mowy", "Inne"];
   userId: number = 1;
 
   constructor(private dialogRef: MatDialogRef<HelpDialogComponent>,

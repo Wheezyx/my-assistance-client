@@ -6,4 +6,6 @@ export class Assistance {
     creator: User;
     assistant: User;
     assistanceStatus: string;
+    typeOfDisability: string;
+    typeOfHelp: string;
 }
