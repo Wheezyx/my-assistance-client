@@ -13,6 +13,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {FormsModule} from '@angular/forms';
 import {AuthenticationService} from './auth/authentication.service';
 import {AuthGuard} from './auth/auth.guard';
+import {AgmCoreModule} from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,10 @@ import {AuthGuard} from './auth/auth.guard';
     MatCardModule,
     MatButtonModule,
     MatDialogModule,
-    FormsModule
+    FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: ''
+    })
   ],
   providers: [AuthGuard,
     AuthenticationService,],

@@ -1,0 +1,24 @@
+img {
+  border-radius: 50%;
+  padding-bottom: 1rem;
+}
+
+mat-card-content {
+  div {
+    padding-bottom: 1rem;
+  }
+}
+
+.card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.mat-card-header {
+  align-items: center;
+  flex-direction: column;
+}
+.mat-dialog-actions {
+  float: right;
+}
