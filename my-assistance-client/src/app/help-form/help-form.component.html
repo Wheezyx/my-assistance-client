@@ -1,0 +1,21 @@
+<form [formGroup]="form" method="post">
+    <div class="form-group">
+        <mat-form-field>
+            <mat-select formControlName="typeOfDisability" name="typeOfDisability" placeholder="Typ niepełnosprawności">
+                <mat-option *ngFor="let disability of typesOfDisabilities" [value]="disability">{{disability}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="form-group">
+        <label>Inny:</label>
+        <input height="50px" matInput formControlName="typeOfDisability" name="typeOfDisability" type="text">
+    </div>
+    <div class="form-group">
+        <label>Rodzaj pomocy:</label>
+        <textarea matInput formControlName="typeOfHelp" name="typeOfHelp" rows="3"> </textarea>
+    </div>
+    <button mat-raised-button color="primary" [disabled]="form.invalid" type="submit" class="help-button"
+        (click)="addAssistance()">Znajdź pomoc
+    </button>
+</form>

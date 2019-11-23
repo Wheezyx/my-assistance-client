@@ -1,0 +1,30 @@
+.form-group {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.mat-form-field {
+    width: 90%;
+    height: 50px;
+}
+
+label {
+    padding: 2% 0;
+}
+
+input {
+    padding: 2% 0;
+    font-size: 1.5em;
+    border-bottom: 2px solid rgb(255, 205, 66);
+    border-radius: 5px;
+}
+
+.formGroup > input, textarea {
+    border-bottom: 2px solid rgb(255, 205, 66);
+    border-radius: 5px;
+    font-size: 1.5em;
+}
+
+.help-button {
+    margin-left: 5%;
+}

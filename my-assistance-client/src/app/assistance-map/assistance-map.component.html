@@ -8,9 +8,10 @@
   </div>
   <div class="right-container">
     <div class="plus-button-container">
-      <button mat-raised-button class="plus-button" color="primary"><i class="material-icons">
+      <button mat-raised-button class="plus-button" color="primary" (click)="openHelpForm()"><i class="material-icons">
         add
       </i></button>
     </div>
   </div>
 </div>
+<app-help-dialog></app-help-dialog>

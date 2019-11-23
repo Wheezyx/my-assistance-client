@@ -1,7 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {DialogService} from 'primeng/api';
 import {HelpInfoComponent} from '../help-info/help-info.component';
 import {MatDialog} from '@angular/material';
+import {HelpDialogComponent} from '../help-dialog/help-dialog.component';
 
 @Component({
   selector: 'app-assistance-map',
@@ -10,6 +11,7 @@ import {MatDialog} from '@angular/material';
   providers: [DialogService]
 })
 export class AssistanceMapComponent implements OnInit {
+  @ViewChild(HelpDialogComponent, {static: false}) helpFormDialogComponent: HelpDialogComponent;
   lat = 52.232222;
   lng = 21.008333;
 
@@ -29,6 +31,10 @@ export class AssistanceMapComponent implements OnInit {
 
   showBoundaries(event) {
     console.log(event);
+  }
+
+  openHelpForm() {
+    this.helpFormDialogComponent.openDialog();
   }
 
 }
