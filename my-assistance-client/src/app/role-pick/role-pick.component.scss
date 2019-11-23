@@ -1,0 +1,27 @@
+
+.main-role-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.left-role {
+  display: flex;
+  background-color: #1976d2;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.right-role {
+  background-color: bisque;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+mat-card {
+  width: 400px;
+  height: 300px;
+}
