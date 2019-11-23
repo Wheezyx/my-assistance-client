@@ -21,6 +21,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatDialogModule} from '@angular/material';
 import {MatInputModule} from '@angular/material';
 import {AssistanceService} from './service/assistance.service';
+import { UserCardComponent } from './user-card/user-card.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {AssistanceService} from './service/assistance.service';
     AssistanceMapComponent,
     HelpInfoComponent,
     HelpFormComponent,
-    HelpDialogComponent
+    HelpDialogComponent,
+    UserCardComponent
   ],
   imports: [
     BrowserModule,

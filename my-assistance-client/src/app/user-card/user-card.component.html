@@ -1,0 +1,17 @@
+<mat-card>
+    <mat-card-header>
+      <img mat-card-lg-image alt="photo" src="assets/antek.jpg">
+    </mat-card-header>
+    <mat-card-content>
+      <div class="attribute">
+        <span class="card-label">Nazwa użytkownika: </span>{{user.username}}
+      </div>
+      <div class="attribute">
+        <span class="card-label">Imię: </span>{{user.firstname}}
+      </div>
+      <div class="attribute">
+        <span class="card-label">Nazwisko: </span>{{user.lastname}}
+      </div>
+      <div class="attribute"><button class="logout-btn" (click)="logout()">Wyloguj się</button></div>
+    </mat-card-content>
+  </mat-card>

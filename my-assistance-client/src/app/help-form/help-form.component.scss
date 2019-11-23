@@ -27,4 +27,13 @@ input {
 
 .help-button {
     margin-left: 5%;
+    background-color: rgb(96, 148, 96);
+    transition: background-color .2s;
+    width: 30%;
+    height: 2.5em;
+    border-radius: 20px;
+}
+
+.help-button:hover {
+    background-color: rgb(53, 121, 53);
 }

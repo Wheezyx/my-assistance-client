@@ -1,0 +1,39 @@
+.mat-card-header {
+    margin-bottom: 10%;
+}
+
+img {
+    border-radius: 50%;
+}
+
+.logout-btn {
+    width: 50%;
+    height: 2.5em;
+    border: 1px solid grey;
+    border-radius: 20px;
+    margin: 0 auto;
+    transition: all .2s ease-in-out;
+}
+
+.logout-btn:hover { 
+    transform: scale(1.1); 
+    cursor: pointer;
+}
+
+.mat-card {
+    width: 100%;
+    margin: 40% 5%;
+}
+
+.attribute {
+    margin: 4%;
+}
+
+.attribute:last-child {
+    display: flex;
+    justify-content: center;
+}
+
+.card-label {
+    font-weight: bold;
+}

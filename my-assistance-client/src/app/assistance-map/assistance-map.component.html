@@ -1,20 +1,21 @@
 <div class="assistance-map-container">
   <div class="map-container">
-
-    <agm-map [latitude]=lat [longitude]=lng (boundsChange)="showBoundaries($event)"
-             [scrollwheel]="true" [minZoom]="12" [mapDraggable]="false">
+    <agm-map [latitude]=lat [longitude]=lng (boundsChange)="showBoundaries($event)" [scrollwheel]="true" [minZoom]="12"
+      [mapDraggable]="false">
       <agm-marker [latitude]="lat" [longitude]="lng" (markerClick)="show()" iconUrl="assets/my_point_small.png">
       </agm-marker>
-      <agm-marker latitude="52.232222" longitude="21.008333" (markerClick)="show()" iconUrl="assets/not_my_point_small.png">
+      <agm-marker latitude="52.232222" longitude="21.008333" (markerClick)="show()"
+        iconUrl="assets/not_my_point_small.png">
       </agm-marker>
     </agm-map>
   </div>
   <div class="right-container">
     <div class="plus-button-container">
       <button mat-raised-button class="plus-button" color="primary" (click)="openHelpForm()"><i class="material-icons">
-        add
-      </i></button>
+          add
+        </i></button>
     </div>
+    <app-user-card></app-user-card>
   </div>
 </div>
 <app-help-dialog></app-help-dialog>

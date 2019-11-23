@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   authenticateUrl: "http://" + window.location.hostname + ':8080/api/login',
   sendAssistanceUrl: "http://" + window.location.hostname + ':8080/api/assistance/user',
+  sendEmailUrl: "http://" + window.location.hostname + ':8080/api/sendMail'
 };
 
 /*

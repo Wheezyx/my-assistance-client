@@ -15,7 +15,7 @@ export class HelpDialogComponent {
   openDialog(): void {
     this.dialogRef = this.dialog.open(HelpFormComponent, {
       width: '30%',
-      height: '33%'
+      height: '36%'
     });
   }
 }
