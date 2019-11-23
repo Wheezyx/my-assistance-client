@@ -10,6 +10,8 @@ import {MatDialog} from '@angular/material';
   providers: [DialogService]
 })
 export class AssistanceMapComponent implements OnInit {
+  lat = 51.678418;
+  lng = 7.809007;
 
   constructor(public dialog: MatDialog) {
   }

@@ -36,7 +36,7 @@ import {AgmCoreModule} from '@agm/core';
     })
   ],
   providers: [AuthGuard,
-    AuthenticationService,],
+    AuthenticationService],
   bootstrap: [AppComponent],
   entryComponents: [HelpInfoComponent]
 })
