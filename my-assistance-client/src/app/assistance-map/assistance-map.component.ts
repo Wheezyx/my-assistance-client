@@ -2,6 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {DialogService} from 'primeng/api';
 import {HelpInfoComponent} from '../help-info/help-info.component';
 import {MatDialog} from '@angular/material';
+import {LocationService} from '../location.service';
 import {HelpDialogComponent} from '../help-dialog/help-dialog.component';
 
 @Component({
@@ -15,10 +16,11 @@ export class AssistanceMapComponent implements OnInit {
   lat = 52.232222;
   lng = 21.008333;
 
-  constructor(public dialog: MatDialog) {
+  constructor(public dialog: MatDialog, private locationService: LocationService) {
   }
 
   ngOnInit() {
+    this.getLocation();
   }
 
   show() {
@@ -30,7 +32,16 @@ export class AssistanceMapComponent implements OnInit {
   }
 
   showBoundaries(event) {
-    console.log(event);
+  }
+
+  getLocation() {
+    this.locationService.getPosition().then(pos => {
+      this.lat = pos.lat;
+      this.lng = pos.lng;
+      sessionStorage.setItem('longitude', this.lng + '');
+      sessionStorage.setItem('latitude', this.lat + '');
+      console.log(`Positon: ${pos.lng} ${pos.lat}`);
+    });
   }
 
   openHelpForm() {

@@ -1,8 +1,8 @@
 import { User } from "./user";
 
 export class Assistance {
-    latitude: number;
-    longitude: number;
+    latitude: string;
+    longitude: string;
     creator: User;
     assistant: User;
     assistanceStatus: string;

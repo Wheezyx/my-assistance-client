@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { MatDialogRef } from '@angular/material';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { HelpDialogComponent } from '../help-dialog/help-dialog.component';
-import { AssistanceService } from '../service/assistance.service';
+import {Component, OnInit} from '@angular/core';
+import {MatDialogRef} from '@angular/material';
+import {FormGroup, FormBuilder, Validators} from '@angular/forms';
+import {HelpDialogComponent} from '../help-dialog/help-dialog.component';
+import {AssistanceService} from '../service/assistance.service';
 
 @Component({
   selector: 'app-help-form',
@@ -11,13 +11,14 @@ import { AssistanceService } from '../service/assistance.service';
 })
 export class HelpFormComponent implements OnInit {
   form: FormGroup;
-  typesOfDisabilities: string[] = ["Choroba neurologiczna", 
-    "Niepełnosprawność ruchowa", "Niepełnosprawność słuchu i/lub mowy", "Inne"];
+  typesOfDisabilities: string[] = ['Choroba neurologiczna',
+    'Niepełnosprawność ruchowa', 'Niepełnosprawność słuchu i/lub mowy', 'Inne'];
   userId: number = 1;
 
   constructor(private dialogRef: MatDialogRef<HelpDialogComponent>,
               private formBuilder: FormBuilder,
-              private assistanceService: AssistanceService) { }
+              private assistanceService: AssistanceService) {
+  }
 
   ngOnInit() {
     this.form = this.buildAssistanceForm();
@@ -26,14 +27,16 @@ export class HelpFormComponent implements OnInit {
   buildAssistanceForm() {
     return this.formBuilder.group({
       typeOfDisability: ['', Validators.required],
-      typeOfHelp: ['', Validators.required]
-    });
+      typeOfHelp: ['', Validators.required],
+  })
+    ;
   }
 
   addAssistance() {
-    this.assistanceService.sendAssistance(this.form.value, this.userId).subscribe(() => {
+    this.assistanceService.sendAssistance(this.form.value, this.userId).subscribe(data => {
+      console.log(data);
       this.reload();
-    })
+    });
   }
 
   reload() {
