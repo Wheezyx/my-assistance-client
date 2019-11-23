@@ -35,7 +35,7 @@ export class HelpFormComponent implements OnInit {
   addAssistance() {
     this.assistanceService.sendAssistance(this.form.value, this.userId).subscribe(data => {
       console.log(data);
-      this.reload();
+      //this.reload();
     });
   }
 

@@ -1,13 +1,12 @@
 <app-header></app-header>
 <div class="assistance-map-container">
   <div class="map-container">
-    <agm-map [latitude]=lat [longitude]=lng (boundsChange)="showBoundaries($event)" [scrollwheel]="true" [minZoom]="12"
-      [mapDraggable]="false">
-      <agm-marker [latitude]="lat" [longitude]="lng" (markerClick)="show()" iconUrl="assets/my_point_small.png">
+    <agm-map [latitude]=lat [longitude]=lng (boundsChange)="showBoundaries($event)"
+             [scrollwheel]="true" [minZoom]="12" [mapDraggable]="false">
+      <agm-marker [latitude]="lat" [longitude]="lng" iconUrl="assets/my_point_small.png">
+
       </agm-marker>
-      <agm-marker latitude="52.232222" longitude="21.008333" (markerClick)="show()"
-        iconUrl="assets/not_my_point_small.png">
-      </agm-marker>
+      <agm-marker *ngFor="let assistance of assistances" [latitude]="assistance.latitude" [longitude]="assistance.longitude" (markerClick)="show(assistance)" iconUrl="assets/not_my_point_small.png"></agm-marker>
     </agm-map>
   </div>
   <div class="right-container">
