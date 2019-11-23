@@ -8,8 +8,11 @@ import {RolePickComponent} from './role-pick/role-pick.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCardModule} from '@angular/material';
 import {AssistanceMapComponent} from './assistance-map/assistance-map.component';
-import { HelpInfoComponent } from './help-info/help-info.component';
+import {HelpInfoComponent} from './help-info/help-info.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import {FormsModule} from '@angular/forms';
+import {AuthenticationService} from './auth/authentication.service';
+import {AuthGuard} from './auth/auth.guard';
 
 @NgModule({
   declarations: [
@@ -25,9 +28,11 @@ import {MatDialogModule} from '@angular/material/dialog';
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [AuthGuard,
+    AuthenticationService,],
   bootstrap: [AppComponent],
   entryComponents: [HelpInfoComponent]
 })

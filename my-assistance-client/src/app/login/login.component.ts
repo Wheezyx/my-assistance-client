@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { AuthenticationService } from '../auth/authentication.service';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {AuthenticationService} from '../auth/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +14,8 @@ export class LoginComponent implements OnInit {
   error = '';
 
   constructor(private router: Router,
-    private authenticationService: AuthenticationService) { }
+              private authenticationService: AuthenticationService) {
+  }
 
   ngOnInit() {
   }
@@ -22,7 +23,7 @@ export class LoginComponent implements OnInit {
   login(): void {
     this.loading = true;
     this.authenticationService.login(
-      { username: this.model.username, password: this.model.password },
+      {username: this.model.username, password: this.model.password},
       () => {
         this.loading = false;
         this.router.navigateByUrl('/role');
@@ -30,11 +31,11 @@ export class LoginComponent implements OnInit {
       (error) => {
         switch (error.status) {
           case 401: {
-            this.error = "Niepoprawny login lub hasło.";
+            this.error = 'Niepoprawny login lub hasło.';
             break;
           }
           default: {
-            this.error = "Oops! Coś poszło nie tak.";
+            this.error = 'Oops! Coś poszło nie tak.';
           }
         }
         this.loading = false;
