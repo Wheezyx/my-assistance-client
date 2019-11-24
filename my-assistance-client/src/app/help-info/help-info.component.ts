@@ -14,7 +14,7 @@ export class HelpInfoComponent implements OnInit {
     public dialogRef: MatDialogRef<HelpInfoComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private assistanceService: AssistanceService,
-    private authenticationService: AuthenticationService
+    public authenticationService: AuthenticationService
   ) {}
 
   ngOnInit() {
@@ -22,6 +22,10 @@ export class HelpInfoComponent implements OnInit {
   }
   closeDialog() {
     this.dialogRef.close("Pizza!");
+  }
+
+  handleRemovingAssistance() {
+    //TODO IMPLEMENT REMOVING ASSISTANCE.
   }
 
   assignToAssistance() {

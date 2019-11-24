@@ -4,6 +4,9 @@
     <img mat-card-lg-image alt="photo" src="assets/antek.jpg">
   </mat-card-header>
   <mat-card-content>
+    <button mat-button *ngIf="data.assistance.creator === authenticationService.currentUserValue.id" (click)="handleRemovingAssistance()">
+      Usuń zgłoszenie.
+    </button>
     <div class="attribute">
       Imię: {{data.assistance.creatorName}}
     </div>
