@@ -1,0 +1,25 @@
+<app-header></app-header>
+<div class="assistance-map-container">
+  <div class="map-container">
+    <agm-map [latitude]=lat [longitude]=lng
+             [scrollwheel]="true" [minZoom]="5" [mapDraggable]="false">
+      <agm-marker [latitude]="lat" [longitude]="lng">
+
+      </agm-marker>
+          <agm-marker [latitude]="assistance.latitude" [longitude]="assistance.longitude" iconUrl="assets/progress_point_small.png"></agm-marker>
+    </agm-map>
+  </div>
+  <div class="right-container">
+    <div class="plus-button-container">
+     <mat-card>
+         <mat-card-title>Pomoc! :)</mat-card-title>
+         <mat-card-content>
+                <b>Imię:</b> {{assistance.creatorName}} <br>
+                <b>Opis</b> {{assistance.helpType}} <br>
+                <br>
+                Lokalizację masz obok!
+         </mat-card-content>
+     </mat-card>
+    </div>
+  </div>
+</div>

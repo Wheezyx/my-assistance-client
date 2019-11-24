@@ -10,6 +10,9 @@ import { first } from "rxjs/operators";
   providedIn: "root"
 })
 export class AssistanceService {
+  findById(id: number): Observable<Assistance>{
+    return this.http.get<Assistance>(environment.baseUrl + '/assistance/' + id);
+  }
   constructor(private http: HttpClient) {}
   getAllAssistanceForLocationInRange(
     lat: number,

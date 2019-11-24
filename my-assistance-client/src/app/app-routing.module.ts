@@ -1,3 +1,4 @@
+import { AssistanceDetailsComponent } from './assistance-details/assistance-details.component';
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {LoginComponent} from './login/login.component';
@@ -9,7 +10,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: '', component: LoginComponent},
   {path: 'assistance-map', component: AssistanceMapComponent, canActivate: [AuthGuard]},
-  {path: 'role', component: RolePickComponent, canActivate: [AuthGuard]}
+  {path: 'role', component: RolePickComponent, canActivate: [AuthGuard]},
+  {path: 'assistance/details/:id', component: AssistanceDetailsComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({

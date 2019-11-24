@@ -23,6 +23,7 @@ import {MatInputModule} from '@angular/material';
 import {AssistanceService} from './service/assistance.service';
 import { UserCardComponent } from './user-card/user-card.component';
 import { HeaderComponent } from './header/header.component';
+import { AssistanceDetailsComponent } from './assistance-details/assistance-details.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { HeaderComponent } from './header/header.component';
     HelpFormComponent,
     HelpDialogComponent,
     UserCardComponent,
-    HeaderComponent
+    HeaderComponent,
+    AssistanceDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,7 @@ import {MatDialogRef} from '@angular/material';
 import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 import {HelpDialogComponent} from '../help-dialog/help-dialog.component';
 import {AssistanceService} from '../service/assistance.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-help-form',
@@ -17,7 +18,8 @@ export class HelpFormComponent implements OnInit {
 
   constructor(private dialogRef: MatDialogRef<HelpDialogComponent>,
               private formBuilder: FormBuilder,
-              private assistanceService: AssistanceService) {
+              private assistanceService: AssistanceService,
+              private router: Router) {
   }
 
   ngOnInit() {
@@ -35,6 +37,7 @@ export class HelpFormComponent implements OnInit {
   addAssistance() {
     this.assistanceService.sendAssistance(this.form.value, this.userId).subscribe(data => {
       console.log(data);
+      this.router.navigate(['/assistance/details', data.id]);
       //this.reload();
     });
   }

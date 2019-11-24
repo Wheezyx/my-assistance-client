@@ -5,8 +5,8 @@ export class Assistance {
     latitude: string;
     longitude: string;
     creatorName: string;
-    creator: User;
-    assistant: User;
+    creator: number;
+    assistant: number;
     assistanceStatus: string;
     disabilityType: string;
     helpType: string;
