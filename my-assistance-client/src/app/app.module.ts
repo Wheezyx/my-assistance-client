@@ -22,6 +22,7 @@ import {MatDialogModule} from '@angular/material';
 import {MatInputModule} from '@angular/material';
 import {AssistanceService} from './service/assistance.service';
 import { UserCardComponent } from './user-card/user-card.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { UserCardComponent } from './user-card/user-card.component';
     HelpInfoComponent,
     HelpFormComponent,
     HelpDialogComponent,
-    UserCardComponent
+    UserCardComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

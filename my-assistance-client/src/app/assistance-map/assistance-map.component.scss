@@ -3,7 +3,7 @@
 }
 
 .map-container {
-  height: 100vh;
+  height: calc(100vh - 100px);
   width: 80vw;
   display: flex;
   align-items: center;
@@ -31,7 +31,7 @@ iframe {
   flex-direction: flex-start;
   box-sizing: border-box;
   width: 100%;
-  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .plus-button {
