@@ -21,7 +21,7 @@ export class HelpInfoComponent implements OnInit {
     console.log('NGONINIT' + this.data);
   }
   closeDialog() {
-    this.dialogRef.close("Pizza!");
+    this.dialogRef.close();
   }
 
   handleRemovingAssistance() {

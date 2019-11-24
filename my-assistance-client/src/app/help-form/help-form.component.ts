@@ -16,7 +16,7 @@ export class HelpFormComponent implements OnInit {
     'Niepełnosprawność ruchowa', 'Niepełnosprawność słuchu i/lub mowy', 'Inne'];
   userId: number = 1;
 
-  constructor(private dialogRef: MatDialogRef<HelpDialogComponent>,
+  constructor(/*private dialogRef: MatDialogRef<HelpDialogComponent>,*/
               private formBuilder: FormBuilder,
               private assistanceService: AssistanceService,
               private router: Router) {

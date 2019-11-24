@@ -11,7 +11,9 @@
         <label>Rodzaj pomocy:</label>
         <textarea matInput formControlName="typeOfHelp" name="typeOfHelp" rows="3"> </textarea>
     </div>
-    <button mat-raised-button color="primary" [disabled]="form.invalid" type="submit" class="help-button"
-        (click)="addAssistance()">Znajdź pomoc
-    </button>
+    <div class="btn-container">
+        <button mat-raised-button color="primary" [disabled]="form.invalid" type="submit" class="help-button"
+            (click)="addAssistance()">Znajdź pomoc
+        </button>
+    </div>
 </form>

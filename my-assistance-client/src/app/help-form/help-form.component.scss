@@ -25,13 +25,20 @@ input {
     font-size: 1.5em;
 }
 
+.btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .help-button {
     margin-left: 5%;
     background-color: rgb(96, 148, 96);
     transition: background-color .2s;
     width: 30%;
-    height: 2.5em;
+    height: 2em;
     border-radius: 20px;
+    font-size: 1.5em;
 }
 
 .help-button:hover {

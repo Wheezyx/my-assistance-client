@@ -10,6 +10,7 @@ import { HelpDialogComponent } from "../help-dialog/help-dialog.component";
 import { first } from "rxjs/operators";
 import { Route } from '@angular/compiler/src/core';
 import { Router } from '@angular/router';
+import { AssistanceSummaryDialogComponent } from '../assistance-summary-dialog/assistance-summary-dialog.component';
 
 @Component({
   selector: "app-assistance-map",
@@ -57,6 +58,13 @@ export class AssistanceMapComponent implements OnInit {
   }
 
   showBoundaries(event) {}
+
+  openAssistanceSummaryDialog() {
+    const dialogRef = this.dialog.open(AssistanceSummaryDialogComponent, {
+      width: '30%',
+      height: '36%'
+    });
+  }
 
   getLocation() {
     if (this.authenticationService.currentUserValue.id === 1) {

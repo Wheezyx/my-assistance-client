@@ -24,6 +24,7 @@ import {AssistanceService} from './service/assistance.service';
 import { UserCardComponent } from './user-card/user-card.component';
 import { HeaderComponent } from './header/header.component';
 import { AssistanceDetailsComponent } from './assistance-details/assistance-details.component';
+import { AssistanceSummaryDialogComponent } from './assistance-summary-dialog/assistance-summary-dialog.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AssistanceDetailsComponent } from './assistance-details/assistance-deta
     HelpDialogComponent,
     UserCardComponent,
     HeaderComponent,
-    AssistanceDetailsComponent
+    AssistanceDetailsComponent,
+    AssistanceSummaryDialogComponent
   ],
   imports: [
     BrowserModule,

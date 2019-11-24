@@ -1,4 +1,7 @@
 <app-header></app-header>
+<div class="top">
+    <h1>Komu dziś pomożesz?</h1>
+</div>
 <div class="assistance-map-container">
   <div class="map-container">
     <agm-map [latitude]=lat [longitude]=lng (boundsChange)="showBoundaries($event)"
@@ -12,13 +15,17 @@
       </span>
     </agm-map>
   </div>
-  <div class="right-container">
+  <!--<div class="right-container">
     <div class="plus-button-container">
       <button mat-raised-button class="plus-button" color="primary" (click)="openHelpForm()"><i class="material-icons">
           add
         </i></button>
     </div>
-    <app-user-card></app-user-card>
+  </div>-->
+</div>
+<div class="form-container">
+  <div><h1>A może Ty potrzebujesz pomocy?</h1></div>
+  <div>
+      <app-help-form></app-help-form>
   </div>
 </div>
-<app-help-dialog></app-help-dialog>

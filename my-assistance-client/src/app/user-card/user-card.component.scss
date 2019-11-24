@@ -1,5 +1,11 @@
 .mat-card-header {
+    display: flex;
+    justify-content: center;
     margin-bottom: 10%;
+}
+
+::ng-deep .mat-card-header-text {
+    margin: 0;
 }
 
 img {
