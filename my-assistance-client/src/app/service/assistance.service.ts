@@ -1,17 +1,16 @@
 import { Observable } from "rxjs";
 import { environment } from "src/environments/environment";
 import { Assistance } from "../model/assistance";
-import { AuthenticationService } from '../auth/authentication.service';
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { AuthenticationService } from "../auth/authentication.service";
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { first } from "rxjs/operators";
 
 @Injectable({
   providedIn: "root"
 })
 export class AssistanceService {
-
-  constructor(private http: HttpClient,
-              private authenticationService: AuthenticationService) { }
+  constructor(private http: HttpClient) {}
   getAllAssistanceForLocationInRange(
     lat: number,
     long: number,
@@ -21,7 +20,9 @@ export class AssistanceService {
       environment.getAssistancesUrl +
         "?latitude=" +
         lat +
-        "&longitude=" + long + "&range=" +
+        "&longitude=" +
+        long +
+        "&range=" +
         range
     );
   }
@@ -38,9 +39,20 @@ export class AssistanceService {
     );
   }
 
-  confirmAssistance(email: string, username: string): Observable<any> {
-    return this.http.post<any>(environment.sendEmailUrl, {email: email, username: username, 
-      helperUsername: this.authenticationService.getCurrentUser() });
+  public assignUserToAssistance(
+    assitanceId,
+    assistantId
+  ): Observable<Assistance> {
+    return this.http
+      .post<Assistance>(
+        environment.baseUrl +
+          "/assistance/" +
+          assitanceId +
+          "/user/" +
+          assistantId +
+          "/assign",
+        null
+      )
+      .pipe(first());
   }
-
 }

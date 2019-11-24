@@ -9,12 +9,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./user-card.component.scss']
 })
 export class UserCardComponent implements OnInit {
-  user: User = {id: 1, username: "antek123", firstname: "Antek", lastname: "Kowalski", notCompletedAssistances: []};
 
+  user: User;
   constructor(private authenticationService: AuthenticationService,
               private router: Router) { }
 
   ngOnInit() {
+    this.user = this.authenticationService.currentUserValue;
+    console.log(this.user);
   }
 
   logout(): void {
